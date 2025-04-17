@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
-
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+section[data-section="hero"] {
+  .media-wrapper {
+    @media (max-width: 1440px) {
+      margin-left: 120px;
+    }
+    @media (min-width: 1441px) {
+      max-width: calc((100vw / 2) + ((1440px - 240px) / 2));
+      margin-left: auto;
+    }
   }
 }
