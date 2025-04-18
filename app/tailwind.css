@@ -4,12 +4,11 @@
 
 section[data-section="hero"] {
   .media-wrapper {
-    @media (max-width: 1440px) {
-      margin-left: 120px;
+    @media (min-width: theme('screens.xl')) and (max-width: theme('screens.2xl')) {
+      max-width: calc((100vw / 2) + ((theme('screens.2xl') - (var(--spacing) * 2)) / 2));
     }
-    @media (min-width: 1441px) {
-      max-width: calc((100vw / 2) + ((1440px - 240px) / 2));
-      margin-left: auto;
+    @media (min-width: theme('screens.2xl')) {
+      max-width: theme('screens.2xl');
     }
   }
 }

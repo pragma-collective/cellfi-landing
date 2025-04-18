@@ -7,7 +7,7 @@ import Footer from "~/components/Footer";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "CellFi" },
+    { title: "CellFi - SMS-based peer-to-peer payments using USDC digital currency - no internet required." },
     {
       name: "description",
       content:
