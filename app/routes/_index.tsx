@@ -7,7 +7,7 @@ import Footer from "~/components/Footer";
 
 const title = "CellFi";
 const desc = "SMS-based peer-to-peer payments using USDC digital currency - no internet required.";
-const url = "https://cellfi-landing-production.up.railway.app";
+const url = "https://cellfi.xyz";
 
 export const meta: MetaFunction = () => {
   return [
