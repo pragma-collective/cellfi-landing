@@ -1,4 +1,4 @@
-import image from "/public/cellfi-eth-global-showcase.webp";
+import image from "./../assets/cellfi-eth-global-showcase.webp";
 import Arrow from "./Arrow";
 
 export default function Showcase() {

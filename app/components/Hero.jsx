@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/media-has-caption */
-import media from "/public/cellfi-media.mp4";
+import mediaMp4 from "./../assets/cellfi-media.mp4";
+import mediaWebm from "./../assets/cellfi-media.webm";
+import poster from "./../assets/cellfi-media-poster.webp";
 
 export default function Hero() {
   return (
@@ -17,12 +19,14 @@ export default function Hero() {
       <div className="media-wrapper relative md:mr-0 px-5 md:pr-0 md:pl-14 lg:pl-28 xl:pl-0 2xl:px-28 transition-all xl:ml-28 2xl:mx-auto">
         <video
           className="aspect-[3/2.5] md:aspect-auto object-cover w-full h-auto block"
+          poster={poster}
           autoPlay
           loop
           playsInline
           muted
         >
-          <source src={media} type="video/mp4"></source>
+          <source src={mediaWebm} type="video/webm" />
+          <source src={mediaMp4} type="video/mp4" />
         </video>
       </div>
     </section>

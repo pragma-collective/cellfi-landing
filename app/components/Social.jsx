@@ -1,5 +1,5 @@
-import xLogo from "/public/x-logo.svg";
-import githubLogo from "/public/github-logo.svg";
+import xLogo from "./../assets/x-logo.svg";
+import githubLogo from "./../assets/github-logo.svg";
 import Arrow from "./Arrow";
 
 export default function Social() {
