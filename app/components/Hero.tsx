@@ -18,6 +18,8 @@ export default function Hero() {
       </div>
       <div className="media-wrapper relative md:mr-0 px-5 md:pr-0 md:pl-14 lg:pl-28 xl:pl-0 2xl:px-28 transition-all xl:ml-28 2xl:mx-auto">
         <video
+          width="1920"
+          height="1080"
           className="aspect-[3/2.5] md:aspect-auto object-cover w-full h-auto block rounded-xl md:rounded-r-none 2xl:rounded-xl transition-all"
           poster={poster}
           autoPlay

@@ -5,22 +5,26 @@ import Showcase from "~/components/Showcase";
 import Social from "~/components/Social";
 import Footer from "~/components/Footer";
 
+const title = "CellFi";
+const desc = "SMS-based peer-to-peer payments using USDC digital currency - no internet required.";
+const url = "https://cellfi-landing-production.up.railway.app";
+
 export const meta: MetaFunction = () => {
   return [
-    { title: "CellFi - SMS-based peer-to-peer payments using USDC digital currency - no internet required." },
+    { title: `${title} - ${desc}` },
     {
       name: "description",
       content:
-        "SMS-based peer-to-peer payments using USDC digital currency - no internet required.",
+        desc,
     },
     {
       property: "og:title",
-      content: "CellFi",
+      content: title,
     },
     {
       name: "og:description",
       content:
-        "SMS-based peer-to-peer payments using USDC digital currency - no internet required.",
+        desc,
     },
     {
       name: "og:type",
@@ -30,27 +34,27 @@ export const meta: MetaFunction = () => {
     {
       name: "og:url",
       content:
-        "https://cellfi-landing-production.up.railway.app",
+        url,
     },
     {
       name: "og:image",
       content:
-        'https://cellfi-landing-production.up.railway.app/cellfi-media-poster.webp',
+        `${url}/cellfi-media-poster.webp`,
     },
     {
       name: "og:image:alt",
       content:
-        'CellFi',
+        title,
     },
     //
     {
       property: "twitter:title",
-      content: "CellFi",
+      content: title,
     },
     {
       name: "twitter:description",
       content:
-        "SMS-based peer-to-peer payments using USDC digital currency - no internet required.",
+        desc,
     },
     {
       name: "twitter:summary_large_image",
@@ -65,12 +69,12 @@ export const meta: MetaFunction = () => {
     {
       name: "twitter:image",
       content:
-        'https://cellfi-landing-production.up.railway.app/cellfi-media-poster.webp',
+        `${url}/cellfi-media-poster.webp`,
     },
     {
       name: "twitter:image:alt",
       content:
-        'CellFi',
+        title,
     }
   ];
 };
