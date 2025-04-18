@@ -1,5 +1,5 @@
-import image from "./../assets/cellfi-eth-global-showcase.webp";
 import Arrow from "./Arrow";
+import image from "~/assets/cellfi-eth-global-showcase.webp";
 
 export default function Showcase() {
   return (
@@ -10,7 +10,7 @@ export default function Showcase() {
         </h3>
         <a
           href="https://ethglobal.com/showcase/cellfi-ctrmp"
-          className="relative"
+          className="relative block"
           target="blank"
         >
           <Arrow className="absolute top-5 right-5 md:top-10 md:right-10 w-[20px] h-[20px] md:w-[30px] md:h-[30px] lg:w-[45px] lg:h-[45px] text-white" />

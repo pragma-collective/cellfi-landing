@@ -4,7 +4,6 @@ import Hero from "~/components/Hero";
 import Showcase from "~/components/Showcase";
 import Social from "~/components/Social";
 import Footer from "~/components/Footer";
-import poster from "./../assets/cellfi-media-poster.webp";
 
 export const meta: MetaFunction = () => {
   return [
@@ -31,12 +30,12 @@ export const meta: MetaFunction = () => {
     {
       name: "og:url",
       content:
-        "https://cellfi.xyz",
+        "https://cellfi-landing-production.up.railway.app",
     },
     {
       name: "og:image",
       content:
-        poster,
+        'https://cellfi-landing-production.up.railway.app/cellfi-media-poster.webp',
     },
   ];
 };

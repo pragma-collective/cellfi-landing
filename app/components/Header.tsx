@@ -1,7 +1,7 @@
 import Logo from "./Logo";
 import CTA from "./CTA";
-import xLogo from "./../assets/x-logo.svg";
-import githubLogo from "./../assets/github-logo.svg";
+import xLogo from "~/assets/x-logo.svg";
+import githubLogo from "~/assets/github-logo.svg";
 
 export default function Header() {
   return (
