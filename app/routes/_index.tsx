@@ -15,7 +15,7 @@ export const meta: MetaFunction = () => {
     },
     {
       property: "og:title",
-      content: "CellFi - SMS-based peer-to-peer payments using USDC digital currency - no internet required.",
+      content: "CellFi",
     },
     {
       name: "og:description",
@@ -37,6 +37,41 @@ export const meta: MetaFunction = () => {
       content:
         'https://cellfi-landing-production.up.railway.app/cellfi-media-poster.webp',
     },
+    {
+      name: "og:image:alt",
+      content:
+        'CellFi',
+    },
+    //
+    {
+      property: "twitter:title",
+      content: "CellFi",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "SMS-based peer-to-peer payments using USDC digital currency - no internet required.",
+    },
+    {
+      name: "twitter:summary_large_image",
+      content:
+        "summary",
+    },
+    {
+      name: "twitter:site",
+      content:
+        "@cellfi_eth",
+    },
+    {
+      name: "twitter:image",
+      content:
+        'https://cellfi-landing-production.up.railway.app/cellfi-media-poster.webp',
+    },
+    {
+      name: "twitter:image:alt",
+      content:
+        'CellFi',
+    }
   ];
 };
 
