@@ -1,4 +1,8 @@
-export default function Arrow({ className }) {
+interface ArrowProps {
+  className?: string;
+}
+
+export default function Arrow({ className }: ArrowProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
