@@ -2,6 +2,7 @@
 import mediaMp4 from "~/assets/cellfi-media.mp4";
 import mediaWebm from "~/assets/cellfi-media.webm";
 import poster from "~/assets/cellfi-media-poster.webp";
+import caption from "~/assets/cellfi-media-caption.vtt";
 
 export default function Hero() {
   return (
@@ -17,19 +18,25 @@ export default function Hero() {
         </h1>
       </div>
       <div className="media-wrapper relative md:mr-0 px-5 md:pr-0 md:pl-14 lg:pl-28 xl:pl-0 2xl:px-28 transition-all xl:ml-28 2xl:mx-auto">
-        <video
-          width="1920"
-          height="1080"
-          className="aspect-[3/2.5] md:aspect-auto object-cover w-full h-auto block rounded-xl md:rounded-r-none 2xl:rounded-xl transition-all"
-          poster={poster}
-          autoPlay
-          loop
-          playsInline
-          muted
+        <div
+          className="bg-cornflowerBlue rounded-xl md:rounded-r-none 2xl:rounded-xl overflow-hidden bg-repeat bg-center bg-cover"
+          style={{ backgroundImage: `url(${poster})` }}
         >
-          <source src={mediaWebm} type="video/webm" />
-          <source src={mediaMp4} type="video/mp4" />
-        </video>
+          <video
+            width="1920"
+            height="1080"
+            className="aspect-[3/2.5] md:aspect-auto object-cover w-full h-auto block transition-all"
+            poster={poster}
+            autoPlay
+            loop
+            playsInline
+            muted
+          >
+            <source src={mediaWebm} type="video/webm" />
+            <source src={mediaMp4} type="video/mp4" />
+            <track src={caption} kind="captions" srcLang="en" />
+          </video>
+        </div>
       </div>
     </section>
   );

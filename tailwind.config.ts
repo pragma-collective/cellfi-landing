@@ -22,7 +22,7 @@ export default {
         midnightBlue: "#21167A",
         cornflowerBlue: "#7284f9",
         delftBlue: "#3a415b",
-        coolGray: "#9fa0ad",
+        coolGray: "#D7D7DA",
       },
     },
   },

@@ -5,7 +5,7 @@ export default function Showcase() {
   return (
     <section className="bg-white py-14 lg:py-28">
       <div className="container px-5 md:px-14 lg:px-28">
-        <h2 className="font-semibold text-[32px] md:text-[50px] lg:text-[70px] text-turquoise mb-5 lg:mb-14 leading-none transition-all">
+        <h2 className="font-semibold text-[32px] md:text-[50px] lg:text-[70px] text-midnightBlue mb-5 lg:mb-14 leading-none transition-all">
           Project Showcase
         </h2>
         <a
