@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import { useEffect, useRef } from "react";
+import { motion } from "motion/react";
 import mediaMp4 from "~/assets/cellfi-media.mp4";
 import mediaWebm from "~/assets/cellfi-media.webm";
 import poster from "~/assets/cellfi-media-poster.webp";
@@ -30,35 +31,42 @@ export default function Hero() {
       className="relative text-white bg-[#21167a] before:content-[''] before:absolute before:bottom-0 before:left-0 before:right-0 before:w-full before:h-1/3 md:before:h-14 lg:before:h-28 before:bg-white"
     >
       <div className="container px-5 md:px-14 lg:px-28 py-8 lg:pt-14 lg:pb-14">
-        <h1 className="font-semibold text-[32px] md:text-[50px] lg:text-[70px] leading-tight transition-all">
+        <motion.h1
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="font-semibold text-[32px] md:text-[50px] lg:text-[70px] leading-tight"
+        >
           SMS-based peer-to-peer payments using{" "}
           <br className="max-[1375px]:hidden" />
           USDC digital currency - no internet required.
-        </h1>
+        </motion.h1>
       </div>
       <div className="media-wrapper relative md:mr-0 px-5 md:pr-0 md:pl-14 lg:pl-28 xl:pl-0 2xl:px-28 transition-all xl:ml-28 2xl:mx-auto">
-        <div
-          className="bg-cornflowerBlue rounded-xl md:rounded-r-none 2xl:rounded-xl overflow-hidden bg-repeat bg-center bg-cover"
-          style={{ backgroundImage: `url(${poster})` }}
-        >
-          <video
-            ref={videoRef}
-            width="1920"
-            height="1080"
-            className="aspect-[3/2.5] md:aspect-auto object-cover w-full h-auto block transition-all"
-            poster={poster}
-            preload="none"
-            autoPlay
-            loop
-            playsInline
-            muted
+        <motion.div initial={{ x: 0, y: 0 }} animate={{ x: 0, y: 0 }}>
+          <div
+            className="bg-cornflowerBlue rounded-xl md:rounded-r-none 2xl:rounded-xl overflow-hidden bg-repeat bg-center bg-cover"
+            style={{ backgroundImage: `url(${poster})` }}
           >
-            <source src={mediaWebm} type="video/webm" />
-            <source src={mediaMp4} type="video/mp4" />
-            <track src={caption} kind="captions" srcLang="en" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+            <video
+              ref={videoRef}
+              width="1920"
+              height="1080"
+              className="aspect-[3/2.5] md:aspect-auto object-cover w-full h-auto block transition-all"
+              poster={poster}
+              preload="none"
+              autoPlay
+              loop
+              playsInline
+              muted
+            >
+              <source src={mediaWebm} type="video/webm" />
+              <source src={mediaMp4} type="video/mp4" />
+              <track src={caption} kind="captions" srcLang="en" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

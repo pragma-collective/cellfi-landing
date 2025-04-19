@@ -12,7 +12,7 @@ export default function Header() {
           <div className="flex items-center gap-[30px]">
             <a
               href="https://x.com/cellfi_eth"
-              className="hidden md:inline-block"
+              className="hidden md:inline-block hover:scale-125 transition-all"
               target="blank"
             >
               <img
@@ -23,12 +23,12 @@ export default function Header() {
             </a>
             <a
               href="https://github.com/pragma-collective/cell-fi/"
-              className="hidden md:inline-block"
+              className="hidden md:inline-block hover:scale-125 transition-all"
               target="blank"
             >
               <img
                 src={githubLogo}
-                className="w-[24px] h-auto grayscale invert"
+                className="w-[26px] h-auto grayscale invert"
                 alt="Github"
               />
             </a>
