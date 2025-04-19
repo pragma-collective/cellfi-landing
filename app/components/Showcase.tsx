@@ -1,3 +1,4 @@
+import LazyImage from "./LazyImage";
 import Arrow from "./Arrow";
 import image from "~/assets/cellfi-eth-global-showcase.webp";
 
@@ -14,13 +15,12 @@ export default function Showcase() {
           target="blank"
         >
           <Arrow className="absolute top-5 right-5 md:top-10 md:right-10 w-[20px] h-[20px] md:w-[30px] md:h-[30px] lg:w-[45px] lg:h-[45px] text-white" />
-          <img
+          <LazyImage
             src={image}
-            width="2372"
-            height="812"
-            className="w-full h-auto"
+            width={2372}
+            height={812}
+            className="w-full h-auto transition-opacity duration-1000 ease-in"
             alt="CellFi ETH Global - Taipei Showcase"
-            loading="lazy"
           />
         </a>
       </div>

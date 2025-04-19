@@ -1,10 +1,29 @@
 /* eslint-disable jsx-a11y/media-has-caption */
+import { useEffect, useRef } from "react";
 import mediaMp4 from "~/assets/cellfi-media.mp4";
 import mediaWebm from "~/assets/cellfi-media.webm";
 import poster from "~/assets/cellfi-media-poster.webp";
 import caption from "~/assets/cellfi-media-caption.vtt";
 
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  useEffect(() => {
+    const handleLoad = () => {
+      const video = videoRef.current;
+      if (video) {
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch((error) => {
+            console.warn("Autoplay failed:", error);
+          });
+        }
+      }
+    };
+    window.addEventListener("load", handleLoad);
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
   return (
     <section
       data-section="hero"
@@ -23,10 +42,12 @@ export default function Hero() {
           style={{ backgroundImage: `url(${poster})` }}
         >
           <video
+            ref={videoRef}
             width="1920"
             height="1080"
             className="aspect-[3/2.5] md:aspect-auto object-cover w-full h-auto block transition-all"
             poster={poster}
+            preload="none"
             autoPlay
             loop
             playsInline
@@ -35,6 +56,7 @@ export default function Hero() {
             <source src={mediaWebm} type="video/webm" />
             <source src={mediaMp4} type="video/mp4" />
             <track src={caption} kind="captions" srcLang="en" />
+            Your browser does not support the video tag.
           </video>
         </div>
       </div>
