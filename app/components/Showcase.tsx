@@ -11,17 +11,17 @@ export default function Showcase() {
         </h2>
         <a
           href="https://ethglobal.com/showcase/cellfi-ctrmp"
-          className="relative block"
+          className="relative block overflow-hidden"
           target="blank"
         >
-          <Arrow className="absolute top-5 right-5 md:top-10 md:right-10 w-[20px] h-[20px] md:w-[30px] md:h-[30px] lg:w-[45px] lg:h-[45px] text-white" />
           <LazyImage
             src={image}
             width={2372}
             height={812}
-            className="w-full h-auto transition-opacity duration-1000 ease-in"
+            className="w-full h-auto transition-all duration-500 hover:scale-105 ease-in-out"
             alt="CellFi ETH Global - Taipei Showcase"
           />
+          <Arrow className="absolute top-5 right-5 md:top-10 md:right-10 w-[20px] h-[20px] md:w-[30px] md:h-[30px] lg:w-[45px] lg:h-[45px] text-white" />
         </a>
       </div>
     </section>

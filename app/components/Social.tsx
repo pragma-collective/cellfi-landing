@@ -16,14 +16,14 @@ export default function Social() {
           <div className="flex gap-5 md:gap-[40px]">
             <a
               href="https://x.com/cellfi_eth"
-              className="bg-white flex items-center justify-center w-14 md:w-28 aspect-square flex-shrink-0 flex-grow-0"
+              className="bg-white flex items-center justify-center w-14 md:w-28 aspect-square flex-shrink-0 flex-grow-0 hover:bg-turquoise transition-all duration-500 hover:-translate-x-[10px] hover:-translate-y-[10px] hover:shadow-[10px_10px_0_0_#FFF]"
               target="blank"
             >
               <img src={xLogo} className="w-9 md:w-14 h-auto" alt="X" />
             </a>
             <a
               href="https://github.com/pragma-collective/cell-fi/"
-              className="bg-white flex items-center justify-center w-14 md:w-28 aspect-square flex-shrink-0 flex-grow-0"
+              className="bg-white flex items-center justify-center w-14 md:w-28 aspect-square flex-shrink-0 flex-grow-0 hover:bg-turquoise transition-all duration-500 hover:-translate-x-[10px] hover:-translate-y-[10px] hover:shadow-[10px_10px_0_0_#FFF]"
               target="blank"
             >
               <img
