@@ -5,7 +5,7 @@
 section[data-section="hero"] {
   .media-wrapper {
     @media (min-width: theme('screens.xl')) and (max-width: theme('screens.2xl')) {
-      max-width: calc((100vw / 2) + ((theme('screens.2xl') - (var(--spacing) * 2)) / 2));
+      max-width: calc((100vw / 2) + ((theme('screens.2xl')) / 2));
     }
     @media (min-width: theme('screens.2xl')) {
       max-width: theme('screens.2xl');

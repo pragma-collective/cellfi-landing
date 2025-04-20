@@ -5,7 +5,6 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "var(--spacing)",
       screens: {
         maxWidth: "1535px",
       },
