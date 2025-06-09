@@ -29,6 +29,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta charSet="utf-8" />
         <meta name="theme-color" content="#21167A" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Google Analytics Tracking */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PBF678MT8"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-0PBF678MT8');
+            `,
+          }}
+        />
         <Meta />
         <Links />
       </head>
